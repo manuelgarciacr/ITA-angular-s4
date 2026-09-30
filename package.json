@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "test": "jest",
+    "build": "jest && cp test-results.html index.html",
     "test:watch": "jest --watchAll --verbose=true"
   },
   "devDependencies": {
-    "jest": "^27.5.1",
-    "jest-html-reporter": "^3.10.1",
-    "jest-junit": "^12.3.0",
+    "jest": "^30.5.2",
+    "jest-html-reporter": "^4.4.2",
+    "jest-junit": "^17.0.0",
     "jest-stare": "^2.5.0"
   },
   "jest-junit": {
@@ -54,5 +55,8 @@
         }
       ]
     ]
+  },
+  "overrides": {
+    "elliptic": "npm:@unabandoned/elliptic@7.0.0"
   }
 }
